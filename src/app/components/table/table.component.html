@@ -1,0 +1,43 @@
+<div style="margin-bottom: 20px;">
+    <input type="text" placeholder="Search table..." (keyup)="onInput($event)">
+</div>
+
+<table>
+    <tr>
+        <th *ngFor="let item of tableHeader">
+            {{ item }}
+        </th>
+    </tr>
+
+    <tr *ngFor="let item of searchResult">
+        <td> {{ item.Master_Company_ID ?? '--' }}
+        </td>
+
+        <td> {{ (item.Master_Company_Name ?? '--') +'  ( '+ item.stringLength +' )' }}
+        </td>
+
+        <td> {{ item.Financial_Details_ID ?? '--' }}
+        </td>
+
+        <td> {{ item.Contact_Details_ID ?? '--' }}
+        </td>
+
+        <td> {{ item.Incharge_Employee_Self_ID ?? '--' }}
+        </td>
+
+        <td> {{ item.Logo_File ?? '--' }}
+        </td>
+
+        <td> {{ item.Status ?? '--' }}
+        </td>
+
+        <td> {{ item.Remarks ?? '--' }}
+        </td>
+
+        <td> {{ item.Attachment ?? '--' }}
+        </td>
+
+        <td> {{ item.System_ID ?? '--' }}
+        </td>
+    </tr>
+</table>
